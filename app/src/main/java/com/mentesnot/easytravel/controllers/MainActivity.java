@@ -136,35 +136,35 @@ public class MainActivity extends AppCompatActivity
         clientID = clientID();
 
         //tab host manager
-        final TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
-        tabHost.setup();
-
-        //Tab 1
-        TabHost.TabSpec spec = tabHost.newTabSpec("Tab One");
-        spec.setContent(R.id.tab1);
-        spec.setIndicator("One way");
-        tabHost.addTab(spec);
-
-        //Tab 2
-        spec = tabHost.newTabSpec("Tab Two");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator("Round Trip");
-        tabHost.addTab(spec);
-
-
-        //tab text color
-        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
-            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextColor(getResources().getColor(R.color.colorInverted));
-        }
+//        final TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
+//        tabHost.setup();
+//
+//        //Tab 1
+//        TabHost.TabSpec spec = tabHost.newTabSpec("Tab One");
+//        spec.setContent(R.id.tab1);
+//        spec.setIndicator("One way");
+//        tabHost.addTab(spec);
+//
+//        //Tab 2
+//        spec = tabHost.newTabSpec("Tab Two");
+//        spec.setContent(R.id.tab2);
+//        spec.setIndicator("Round Trip");
+//        tabHost.addTab(spec);
 
 
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String s) {
-                currentTab = tabHost.getCurrentTab();
-            }
-        });
+//        //tab text color
+//        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+//            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+//            tv.setTextColor(getResources().getColor(R.color.colorInverted));
+//        }
+//
+//
+//        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+//            @Override
+//            public void onTabChanged(String s) {
+//                currentTab = tabHost.getCurrentTab();
+//            }
+//        });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, DatabaseHelper.CITIES);

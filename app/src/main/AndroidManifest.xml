@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity
             android:name="com.mentesnot.easytravel.controllers.LaunchActivity"
             android:theme="@style/AppTheme.NoActionBar">
